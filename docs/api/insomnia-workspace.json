@@ -1,0 +1,136 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-09-30T15:18:13.290Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "wrk_ideabank_suite",
+      "_type": "workspace",
+      "created": 1790781493290,
+      "modified": 1790781493290,
+      "name": "Ideabank API Suite",
+      "description": "Ambiente Insomnia para Ideabank. Autor: Felipe Madison (@FelipeMadson)",
+      "scope": "collection"
+    },
+    {
+      "_id": "env_ideabank_base",
+      "_type": "environment",
+      "parentId": "wrk_ideabank_suite",
+      "created": 1790781493290,
+      "modified": 1790781493290,
+      "name": "Local Development",
+      "data": {
+        "base_url": "http://localhost:3000",
+        "api_key": "test-staff-engineer-token-madison"
+      }
+    },
+    {
+      "_id": "req_ideabank_1",
+      "_type": "request",
+      "parentId": "wrk_ideabank_suite",
+      "created": 1790781493290,
+      "modified": 1790781493290,
+      "name": "1. Health & Liveness Probe",
+      "method": "GET",
+      "url": "{{ _.base_url }}/health",
+      "description": "Verifica a integridade imediata do serviço, tempo de atividade e status do subsistema WAL.",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ _.api_key }}"
+        }
+      ],
+      "body": {}
+    },
+    {
+      "_id": "req_ideabank_2",
+      "_type": "request",
+      "parentId": "wrk_ideabank_suite",
+      "created": 1790781493291,
+      "modified": 1790781493291,
+      "name": "2. OpenMetrics / Prometheus Telemetry",
+      "method": "GET",
+      "url": "{{ _.base_url }}/metrics",
+      "description": "Exporta telemetria em formato texto padrão OpenMetrics para raspagem por Prometheus e Grafana.",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ _.api_key }}"
+        }
+      ],
+      "body": {}
+    },
+    {
+      "_id": "req_ideabank_3",
+      "_type": "request",
+      "parentId": "wrk_ideabank_suite",
+      "created": 1790781493292,
+      "modified": 1790781493292,
+      "name": "3. Dispatch / Processar Operação — Ideabank",
+      "method": "POST",
+      "url": "{{ _.base_url }}/api/v1/ideabank/dispatch",
+      "description": "Executa transação com garantia de atomicidade, validação de integridade e registro no log WAL.",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ _.api_key }}"
+        }
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"action\": \"PROCESS_TRANSACTION\",\n  \"payload\": {\n    \"clientId\": \"felipe-madison-tester\",\n    \"timestamp\": \"2026-09-30T15:18:13.290Z\",\n    \"data\": {\n      \"sampleKey\": \"enterprise-payload-sample\",\n      \"priority\": \"HIGH\"\n    }\n  }\n}"
+      }
+    },
+    {
+      "_id": "req_ideabank_4",
+      "_type": "request",
+      "parentId": "wrk_ideabank_suite",
+      "created": 1790781493293,
+      "modified": 1790781493293,
+      "name": "4. Consulta de Estado Consolidado — Ideabank",
+      "method": "GET",
+      "url": "{{ _.base_url }}/api/v1/ideabank/state",
+      "description": "Recupera o estado atualizado em memória e estatísticas de processamento persistidas.",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ _.api_key }}"
+        }
+      ],
+      "body": {}
+    }
+  ]
+}

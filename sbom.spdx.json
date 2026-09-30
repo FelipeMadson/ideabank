@@ -1,0 +1,46 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "Ideabank SBOM",
+  "documentNamespace": "https://github.com/FelipeMadson/ideabank/spdxdocs/ideabank-1.0.0-18fc650b-5a3c-4f10-9a59-ae50bdcfc5c7",
+  "creationInfo": {
+    "created": "2026-09-30T15:18:13.291Z",
+    "creators": [
+      "Person: Felipe Madison (@FelipeMadson)",
+      "Organization: Autonomous Portfolio Engine — Staff Engineering Grade",
+      "Tool: SecurityCiGenerator-1.0.0"
+    ],
+    "licenseListVersion": "3.21"
+  },
+  "packages": [
+    {
+      "name": "ideabank",
+      "SPDXID": "SPDXRef-Package-ideabank",
+      "versionInfo": "1.0.0",
+      "packageFileName": "ideabank-1.0.0.tar.gz",
+      "packageSupplier": "Person: Felipe Madison (https://github.com/FelipeMadson)",
+      "originator": "Person: Felipe Madison (https://github.com/FelipeMadson)",
+      "downloadLocation": "git+https://github.com/FelipeMadson/ideabank.git@v1.0.0",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c22826eee854fc63b33fa613ecd9f02f6b7acb382c60741cc5a854ce22a20f56"
+        }
+      ],
+      "homepage": "https://github.com/FelipeMadson/ideabank",
+      "concludedLicense": "MIT",
+      "declaredLicense": "MIT",
+      "copyrightText": "Copyright (c) 2026 Felipe Madison (@FelipeMadson)",
+      "description": "Enterprise-grade production release for Ideabank, engineered by Felipe Madison."
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-Package-ideabank",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}
