@@ -1,0 +1,31 @@
+{
+  "name": "ideabank",
+  "version": "1.0.0",
+  "description": "Fullstack Platform for Missing Software Ideas, Collaborative Voting & 1-Click GitHub Issues Sync",
+  "main": "src/cli.ts",
+  "bin": {
+    "ideabank": "./bin/ideabank.js"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-strip-types src/cli.ts start",
+    "test": "node --experimental-strip-types --test tests/**/*.test.ts",
+    "lint": "node --experimental-strip-types --test"
+  },
+  "keywords": [
+    "ideabank",
+    "developer-tools",
+    "github-issues",
+    "voting-platform",
+    "product-ideas",
+    "fullstack",
+    "local-first",
+    "sqlite",
+    "ranking-algorithm"
+  ],
+  "author": "Felipe Madson <felipemadson@users.noreply.github.com> (https://github.com/FelipeMadson)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
