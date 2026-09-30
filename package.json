@@ -1,6 +1,6 @@
 {
   "name": "ideabank",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Fullstack Platform for Missing Software Ideas, Collaborative Voting & 1-Click GitHub Issues Sync",
   "main": "src/cli.ts",
   "bin": {
