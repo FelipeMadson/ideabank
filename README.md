@@ -210,7 +210,7 @@ Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
 
 ## 🎮 Live Interactive Playground (No Backend Required)
 
-Experimente o simulador em tempo real executando 100% no seu navegador com WebCrypto, Token Bucket e Write-Ahead Logging:
+Experimente o emulador de terminal interativo com execução de comandos, histórico via setas e autocompletação inteligente via Tab:
 👉 **[Acessar Live Playground do Ideabank](https://felipemadson.github.io/ideabank/)**
 
 ## 🖥️ Demonstração em Terminal Vetorial (Execução & Benchmarks)
