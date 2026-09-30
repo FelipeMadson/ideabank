@@ -208,6 +208,14 @@ Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
 
 ---
 
+## 📐 Arquitetura do Sistema & Fluxo de Dados
+
+<p align="center">
+  <img src="docs/assets/architecture.svg" alt="Arquitetura & Fluxo de Dados - Ideabank" width="920" />
+</p>
+
+---
+
 ## 🎮 Live Interactive Playground (No Backend Required)
 
 Experimente o emulador de terminal interativo com execução de comandos, histórico via setas e autocompletação inteligente via Tab:
